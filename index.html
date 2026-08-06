@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>T!MMY — Christlicher Pop. Rap. Rock.</title>
-<meta name="description" content="T!MMY macht christlichen Pop, Rap und Rock. Hör jetzt auf Spotify, YouTube, Instagram, TikTok und Apple Music.">
+<meta name="description" content="T!MMY macht christlichen Pop, Rap und Rock. Hör jetzt auf Spotify, Instagram, TikTok und Apple Music.">
 <meta property="og:title" content="T!MMY — Christlicher Pop. Rap. Rock.">
 <meta property="og:description" content="Hör jetzt T!MMY auf allen Plattformen.">
 <meta property="og:type" content="website">
@@ -13,14 +13,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --void:#18130F;
-    --raised:#241D17;
-    --raised-2:#2C241C;
-    --hairline:#3D3226;
-    --ink:#F3E9DA;
-    --ink-dim:#B7A488;
-    --ember:#E2A03F;
-    --dawn:#C1502E;
+    --void:#0A0C11;
+    --raised:#131722;
+    --raised-2:#1A2030;
+    --hairline:#262D40;
+    --ink:#F1F3F8;
+    --ink-dim:#8891A6;
+    --ember:#3D63FF;
+    --dawn:#1E2F8F;
+    --red:#E14B3D;
     --grad: linear-gradient(100deg, var(--ember) 0%, var(--dawn) 100%);
   }
 
@@ -96,14 +97,15 @@
   .hero-scrim{
     position:absolute; z-index:0; inset:0;
     background:
-      linear-gradient(180deg, rgba(24,19,15,0.6) 0%, rgba(24,19,15,0.08) 24%, rgba(24,19,15,0.04) 52%, rgba(24,19,15,0.72) 84%, var(--void) 100%);
+      linear-gradient(180deg, rgba(10,12,17,0.6) 0%, rgba(10,12,17,0.08) 24%, rgba(10,12,17,0.04) 52%, rgba(10,12,17,0.72) 84%, var(--void) 100%);
   }
 
   .hero-glow{
     position:absolute; z-index:1; inset:0; pointer-events:none;
     background:
-      radial-gradient(ellipse 55% 40% at 12% 4%, rgba(226,160,63,0.20), transparent 62%),
-      radial-gradient(ellipse 55% 40% at 90% 96%, rgba(193,80,46,0.16), transparent 62%);
+      radial-gradient(ellipse 55% 40% at 12% 4%, rgba(61,99,255,0.22), transparent 62%),
+      radial-gradient(ellipse 50% 35% at 92% 98%, rgba(30,47,143,0.20), transparent 62%),
+      radial-gradient(ellipse 30% 22% at 78% 12%, rgba(225,75,61,0.10), transparent 65%);
     animation:glowPulse 9s ease-in-out infinite alternate;
   }
   @keyframes glowPulse{ from{ opacity:0.65; } to{ opacity:1; } }
@@ -111,12 +113,12 @@
   .eyebrow{
     position:relative; z-index:3;
     font-family:'Space Grotesk'; font-weight:600; font-size:0.8rem;
-    letter-spacing:0.25em; text-transform:uppercase; color:var(--dawn);
+    letter-spacing:0.25em; text-transform:uppercase; color:var(--red);
     display:flex; align-items:center; gap:0.6rem;
     opacity:0; animation:riseIn .8s .2s ease forwards;
   }
   .eyebrow::before{
-    content:''; width:2rem; height:1px; background:var(--dawn);
+    content:''; width:2rem; height:1px; background:var(--red);
   }
 
   .wordmark{
@@ -135,6 +137,8 @@
     display:inline-block;
     transform:scaleY(1.16);
     transform-origin:bottom;
+    background:linear-gradient(180deg, var(--ink) 55%, var(--ink-dim) 130%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
   }
   .wordmark .bang{
     font-weight:inherit;
@@ -216,7 +220,7 @@
   .scroll-cue__line{ width:1px; height:34px; background:var(--hairline); position:relative; overflow:hidden; }
   .scroll-cue__line::after{
     content:''; position:absolute; top:-100%; left:0; width:100%; height:100%;
-    background:var(--dawn); animation:cueDrop 1.8s ease-in-out infinite;
+    background:var(--red); animation:cueDrop 1.8s ease-in-out infinite;
   }
   @keyframes cueDrop{ 0%{top:-100%;} 60%{top:100%;} 100%{top:100%;} }
 
@@ -322,7 +326,7 @@
   .story p strong{ color:var(--ink); font-weight:600; }
 
   .quote{
-    border-left:2px solid var(--ember);
+    border-left:2px solid var(--red);
     padding-left:1.5rem;
     font-family:'Space Grotesk'; font-weight:500; font-size:1.2rem;
     color:var(--ink); line-height:1.5;
@@ -347,6 +351,8 @@
     display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem;
     font-family:'Space Grotesk'; font-size:0.8rem; color:var(--ink-dim);
   }
+  footer a{ color:var(--ink-dim); transition:color .25s ease; }
+  footer a:hover{ color:var(--ink); text-decoration:underline; text-underline-offset:3px; }
 
   @media (prefers-reduced-motion: reduce){
     *{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important; }
@@ -403,13 +409,13 @@
 <section class="about">
   <div class="section-inner">
     <span class="label reveal">Die Musik</span>
-    <h2 class="reveal">Drei Sounds, <em>eine Botschaft.</em> Mit Musik das Reich Gottes nach Deutschland brignen!</h2>
+    <h2 class="reveal">Drei Sounds, <em>eine Botschaft.</em> Pop-Hooks, Rap-Punchlines und Rock-Energie — verbunden durch echten Glauben statt leerer Worte.</h2>
     <div class="tags">
       <span class="tag reveal">Christlicher Pop</span>
       <span class="tag reveal">Rap</span>
       <span class="tag reveal">Rock</span>
       <span class="tag reveal">Live-Energie</span>
-      <span class="tag reveal">Deutsch</span>
+      <span class="tag reveal">Deutsch &amp; Englisch</span>
     </div>
   </div>
 </section>
@@ -432,7 +438,7 @@
 </section>
 
 <div class="strip reveal">
-  <p>Alle Songs von T!MMY — <strong>jetzt streamen.</strong></p>
+  <p>Neuer Song ist da — <strong>jetzt streamen.</strong></p>
   <a class="strip-btn" href="#links">
     Zu den Plattformen
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -445,10 +451,10 @@
       <span class="label reveal">Meine Geschichte</span>
       <h2 class="reveal">Vom Zweifel<br>zum Sound.</h2>
       <p class="reveal"><strong>T!MMY</strong> ist aufgewachsen zwischen Kirchenbank und Kopfhörern — zwischen dem, was man ihm erzählt hat, und dem, was er selbst finden musste. Rap war der erste Weg, Gedanken loszuwerden, die sonst nirgendwo hinpassten.</p>
-      <p class="reveal">Aus Beats in der eigenen vier Wände wurde mit der Zeit ein eigener Sound: mal Pop-Melodie, mal Rock-Wucht, immer mit einem Kern, der bleibt — die Überzeugung, dass der Glaube an Jesus kein Klischee sein muss, sondern Authentisch gelebt werden kann.</p>
+      <p class="reveal">Aus Beats in der eigenen vier Wände wurde mit der Zeit ein eigener Sound: mal Pop-Melodie, mal Rock-Wucht, immer mit einem Kern, der bleibt — die Überzeugung, dass Glaube kein Klischee sein muss, sondern echt klingen kann.</p>
     </div>
     <div class="reveal">
-      <p class="quote">„Ich mache Musik, die man laut aufdrehen kann — und die trotzdem etwas trägt, wenn's leise wird. Musik, bei der Gott wirkt und die Herzen verändert.“</p>
+      <p class="quote">„Ich wollte Musik machen, die man laut aufdrehen kann — und die trotzdem etwas trägt, wenn's leise wird.“</p>
       <div class="fan-shots">
         <img src="assets/fans-1.jpg" alt="Fans im Publikum halten ein selbstgemaltes Schild mit der Aufschrift GO T!MMY hoch" loading="lazy">
         <img src="assets/fans-2.jpg" alt="Fans im Publikum halten ein Schild mit der Aufschrift T!MMY hoch" loading="lazy">
@@ -463,13 +469,13 @@
   <div class="links">
     <a class="link" href="https://open.spotify.com/intl-de/artist/7zgibDCFT430yBy4pHtIdo?si=EATE6GbUQbWfrwsxPHY6aA" target="_blank" rel="noopener"><span class="link__label">Spotify</span></a>
     <a class="link" href="https://www.instagram.com/thisistimmy07" target="_blank" rel="noopener"><span class="link__label">Instagram</span></a>
-    <a class="link" href="https://www.tiktok.com/@thisistimmy07" target="_blank" rel="noopener"><span class="link__label">TikTok</span></a>
     <a class="link" href="https://music.apple.com/de/artist/t-mmy/1816571032" target="_blank" rel="noopener"><span class="link__label">Apple Music</span></a>
   </div>
 </section>
 
 <footer>
   <span>&copy; <span id="year"></span> T!MMY. Alle Rechte vorbehalten.</span>
+  <a href="impressum.html">Impressum</a>
   <span>Made with faith &amp; bass.</span>
 </footer>
 
